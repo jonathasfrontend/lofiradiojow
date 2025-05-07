@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require("discord.js");
 const { client } = require("../Client");
 
-async function menssageFile(interaction) {
+async function Oi(interaction) {
   if (!interaction.isCommand()) return;
 
   const { commandName } = interaction;
@@ -20,4 +20,4 @@ async function menssageFile(interaction) {
   }
 };
 
-module.exports = { menssageFile };
+module.exports = { Oi };
