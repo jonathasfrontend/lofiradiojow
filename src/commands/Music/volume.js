@@ -8,8 +8,8 @@ async function Volume(interaction) {
   if (!voiceChannel) {
 
     const embed = new EmbedBuilder()
-      .setColor('#FF0000')
-      .setDescription('❌ Você precisa estar em um canal de voz para usar este comando!');
+      .setColor('#DDBD86')
+      .setDescription('<:error:1364257210745487422> Você precisa estar em um canal de voz para usar este comando!');
 
     return interaction.reply({ embeds: [embed], ephemeral: true});
   }
@@ -18,8 +18,8 @@ async function Volume(interaction) {
   const player = interaction.client.kazagumo.players.get(interaction.guildId);
   if (!player?.queue?.current) {
       const embed = new EmbedBuilder()
-        .setColor('#FF0000')
-        .setDescription('❌ Não há nenhuma música tocando no momento.')
+        .setColor('#DDBD86')
+        .setDescription('<:error:1364257210745487422> Não há nenhuma música tocando no momento.')
     return interaction.reply({ embeds: [embed], ephemeral: true });
   }
 
@@ -27,8 +27,8 @@ async function Volume(interaction) {
   const volume = interaction.options.getNumber('amount');
   if (volume == null || volume < 0 || volume > 100) {
     const embed = new EmbedBuilder()
-      .setColor('#FF0000')
-      .setDescription('❌ Volume inválido! Use `/volume <0-100>`')
+      .setColor('#DDBD86')
+      .setDescription('<:error:1364257210745487422> Volume inválido! Use `/volume <0-100>`')
     return interaction.reply({ embeds: [embed], ephemeral: true });
   }
 
@@ -37,7 +37,10 @@ async function Volume(interaction) {
   // 6. Resposta de sucesso
     const embed = new EmbedBuilder()
       .setColor('#DDBD86')
-      .setDescription(`🔊 Volume ajustado para **${volume}%**`)
+      .setDescription(`
+        <:dvd:1364257189887213628> O volume foi alterado com sucesso
+        <:blank:1364257084660650014><:loud:1364257411115782144> **Volume atual: ${volume}%**
+      `)
   return interaction.reply({ embeds: [embed] });
 }
 

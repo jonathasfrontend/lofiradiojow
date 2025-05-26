@@ -21,9 +21,6 @@ const STATION_OPTIONS = [
 ];
 
 async function StationCommand(interaction) {
-  // 0. Validar tipo de interação
-  if (!interaction.isCommand()) return;
-
   try {
     // 1. Checagem rápida antes de defer (evita “Unknown interaction”)
     const guildId = interaction.guildId;
