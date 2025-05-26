@@ -1,7 +1,18 @@
 {
   "name": "jow-bot",
-  "version": "1.0.0",
+  "nameSpace": "LofiRadioJow",
+  "version": "1.0.1",
+  "description": "Bot de lo-fi radio feito com Discord.js e Node.js por Jonathas Oliveira",
   "main": "index.js",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathasfrontend/jonalandia"
+  },
+  "author": {
+    "name": "Jonathas Oliveira",
+    "email": "jonathass56778@gmail.com"
+  },
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
@@ -9,10 +20,28 @@
   "bin": {
     "jow-bot": "index.js"
   },
-  "keywords": [],
-  "author": "Jonathas Oliveira",
-  "license": "ISC",
-  "description": "Crie seu bot de Discord automaticamente com JavaScript",
+  "keywords": [
+    "bot",
+    "lofi",
+    "Lo-fi",
+    "lofi radio",
+    "Jow",
+    "radio",
+    "lofi radio jow",
+    "Lo-fi Radio Jow",
+    "discord",
+    "discord.js",
+    "node.js",
+    "node",
+    "javascript",
+    "js",
+    "bot discord",
+    "bot discord.js",
+    "bot node.js",
+    "bot node",
+    "bot javascript",
+    "bot js"
+  ],
   "dependencies": {
     "chalk": "^5.3.0",
     "discord.js": "^14.16.3",
