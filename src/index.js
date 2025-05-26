@@ -19,7 +19,7 @@ const { bdServerConect } = require('./config/bdServerConect')
 
 require('dotenv').config()
 
-client.once('ready', () => {
+client.once('ready', async () => {
   Status();
   bdServerConect();
   client.kazagumo = kazagumoInstance;

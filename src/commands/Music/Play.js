@@ -28,8 +28,8 @@ async function Play(interaction) {
         return interaction.reply({
             embeds: [
                 new EmbedBuilder()
-                    .setColor('#FF0000')
-                    .setDescription('❌ Você precisa estar em um canal de voz para usar este comando!')
+                    .setColor('#DDBD86')
+                    .setDescription('<:loud:1364257411115782144> Você precisa estar em um canal de voz para usar este comando!')
             ],
             ephemeral: true
         });
@@ -44,8 +44,8 @@ async function Play(interaction) {
             .setColor(sameChannel ? '#DDBD86' : '#FF0000')
             .setDescription(
                 sameChannel
-                    ? '✅ O bot já está conectado neste canal de voz.'
-                    : '❌ O bot já está conectado em outro canal de voz.'
+                    ? '<:loud:1364257411115782144> O bot já está conectado neste canal de voz.'
+                    : '<:error:1364257210745487422> O bot já está conectado em outro canal de voz.'
             );
         return interaction.reply({ embeds: [embed], ephemeral: true });
     }
@@ -94,8 +94,8 @@ async function Play(interaction) {
         return interaction.editReply({
             embeds: [
                 new EmbedBuilder()
-                    .setColor('#FF0000')
-                    .setDescription('❌ Nenhum resultado encontrado. Tente novamente mais tarde.')
+                    .setColor('#DDBD86')
+                    .setDescription('<:error:1364257210745487422> Nenhum resultado encontrado. Tente novamente mais tarde.')
             ]
         });
     }
@@ -113,7 +113,10 @@ async function Play(interaction) {
     // 10. Embed final
     const playedEmbed = new EmbedBuilder()
         .setColor('#DDBD86')
-        .setDescription(`🎵 Conectado com sucesso ao canal: **${voiceChannel.name}**.`);
+        .setDescription(`
+            <:notes:1364257513054146652> Conectado com sucesso no canal: <#${voiceChannel.id}>.
+            <:blank:1364257084660650014><:dvd:1364257189887213628> **Entrou no canal de voz a tocar 24/7.**
+        `);
     await interaction.editReply({ embeds: [playedEmbed] });
 }
 
