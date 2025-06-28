@@ -14,9 +14,9 @@ function parseBoolean(value) {
 
 const nodes = [
     {
-        name: "Jonathas",     
-        url: process.env.NODE_URL || 'dnode2.astrast.host:9869', 
-        auth: process.env.NODE_AUTH || 'https://discord.gg/8M2bAHZaQH',
+        name: "LavalinkLoFiRadio",
+        url: process.env.NODE_URL || 'lavalink.jirayu.net:13592', 
+        auth: process.env.NODE_AUTH || 'youshallnotpass',
         secure: parseBoolean(process.env.NODE_SECURE || 'false'),
     },
 ];
